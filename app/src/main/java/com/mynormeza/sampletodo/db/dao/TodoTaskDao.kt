@@ -10,10 +10,17 @@ interface TodoTaskDao {
     fun getList(): LiveData<List<TodoTask>>
 
     @Query("SELECT * FROM todo_task where id_todo_list = :idList")
-    fun getByIdList(idList: Long): LiveData<List<TodoTask>>
+    fun getByIdList(idList: Long): List<TodoTask>
+
+    @Query("SELECT * FROM todo_task where id_todo_list = :idList")
+    fun getByIdListLive(idList: Long): LiveData<List<TodoTask>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insert(todoTask: TodoTask)
+
+    @Update
+    fun update(todoTask: TodoTask)
+
 
     @Delete
     fun delete(todoTask: TodoTask)

@@ -11,7 +11,7 @@ interface TodoListDao {
     fun getList(): LiveData<List<TodoList>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insert(todoList: TodoList)
+    fun insert(todoList: TodoList): Long
 
     @Delete
     fun delete(todoList: TodoList)

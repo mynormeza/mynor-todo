@@ -9,7 +9,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "todo_list")
 data class TodoList (
     @PrimaryKey(autoGenerate = true)
-    val id: Long,
+    var id: Long = 0L,
     val name: String,
 
 )
