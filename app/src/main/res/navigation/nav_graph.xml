@@ -10,4 +10,9 @@
         android:name="com.mynormeza.sampletodo.ui.main.MainFragment"
         android:label="main_fragment"
         tools:layout="@layout/main_fragment" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.mynormeza.sampletodo.ui.login.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" />
 </navigation>
