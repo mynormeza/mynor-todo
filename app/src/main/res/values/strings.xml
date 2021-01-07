@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Sample Todo</string>
+    <string name="username">Usuario</string>
+    <string name="password">Password</string>
+    <string name="login">Iniciar Sesión</string>
+
+    <string name="username_error_email">Debe ingresar un correo</string>
+    <string name="username_error_message">Ingrese correo como username</string>
+    <string name="password_error_message">Minimo de longitud = 6</string>
+    <string name="etusername_error">Nombre de usuario incorrecto</string>
+    <string name="etpassword_error">Contraseña incorrecta</string>
 </resources>
