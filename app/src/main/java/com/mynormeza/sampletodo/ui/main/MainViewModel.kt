@@ -13,7 +13,7 @@ class MainViewModel @ViewModelInject constructor(
     private val firebaseUserLiveData: FirebaseUserLiveData
 ) : ViewModel() {
 
-    val poiList = localRepository.getTodoLists()
+    val listsOfTodos = localRepository.getTodoLists()
     val autState = firebaseUserLiveData.map { firebaseUser ->
         if (firebaseUser != null) {
             AuthenticationState.AUTHENTICATED

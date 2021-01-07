@@ -9,10 +9,37 @@
         android:id="@+id/mainFragment"
         android:name="com.mynormeza.sampletodo.ui.main.MainFragment"
         android:label="main_fragment"
-        tools:layout="@layout/main_fragment" />
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_addListFragment"
+            app:destination="@id/addListFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_listDetailsFragment"
+            app:destination="@id/listDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.mynormeza.sampletodo.ui.login.LoginFragment"
         android:label="login_fragment"
         tools:layout="@layout/login_fragment" />
+    <fragment
+        android:id="@+id/addListFragment"
+        android:name="com.mynormeza.sampletodo.ui.addlist.AddListFragment"
+        android:label="add_list_fragment"
+        tools:layout="@layout/add_list_fragment" />
+    <fragment
+        android:id="@+id/listDetailsFragment"
+        android:name="com.mynormeza.sampletodo.ui.listdetails.ListDetailsFragment"
+        android:label="list_details_fragment"
+        tools:layout="@layout/list_details_fragment" >
+        <argument
+            android:name="listName"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="ListName" />
+        <argument
+            android:name="listId"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
 </navigation>
